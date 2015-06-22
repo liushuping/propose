@@ -1,0 +1,22 @@
+{
+  "name": "propose",
+  "version": "0.0.0",
+  "description": "Propse a word when the input word is not in the dictionary",
+  "main": "propose.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liushuping/"
+  },
+  "keywords": [
+    "word",
+    "typo",
+    "propose",
+    "similar",
+    "correction"
+  ],
+  "author": "Shuping LIU",
+  "license": "MIT"
+}
