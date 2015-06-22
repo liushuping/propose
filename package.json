@@ -1,14 +1,14 @@
 {
   "name": "propose",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Propse a word when the input word is not in the dictionary",
   "main": "propose.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/liushuping/"
+    "url": "https://github.com/liushuping/propose"
   },
   "keywords": [
     "word",
