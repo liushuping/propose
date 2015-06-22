@@ -18,5 +18,8 @@
     "correction"
   ],
   "author": "Shuping LIU",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
 }
