@@ -22,7 +22,7 @@ function propose() {
 
     for (var i = 0; i < len; ++i) {
         if (ignoreCase)
-            distance = levenshtein(word.toLowerCase(), dictionary[i].toLowerCase());
+            distance = levenshtein(word, dictionary[i], true);
         else
             distance = levenshtein(word, dictionary[i]);
 
