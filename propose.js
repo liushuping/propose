@@ -4,14 +4,21 @@ function propose() {
     var ratio;
     var distance;
     var proposed;
+    var threshhold;
+    var ignorecase;
     var max_ratio = 0;
     var word = arguments[0];
     var dictionary = arguments[1];
     var len = dictionary.length;
-    var threshhold_ratio = arguments[2];
+    var options = arguments[2];
 
-    if (threshhold_ratio === undefined)
-        threshhold_ratio = 0;
+    if (options) {
+        threshhold = options.threshhold;
+        ignorecase = options.ignorecase;
+    }
+
+    if (threshhold === undefined)
+        threshhold = 0;
 
     for (var i = 0; i < len; ++i) {
         distance = levenshtein(word, dictionary[i]);
@@ -26,7 +33,7 @@ function propose() {
         }
     }
 
-    if (max_ratio >= threshhold_ratio)
+    if (max_ratio >= threshhold)
         return proposed;
 
     return null;

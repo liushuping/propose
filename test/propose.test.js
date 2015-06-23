@@ -19,9 +19,13 @@ describe('#propose', function() {
     it('should propose the word within the given threshhold', function() {
         var dictionary = ['aaaaaaaa', 'baabbbb', 'ccccc'];
         var word = 'ab';
-        var proposed = propose(word, dictionary, 0.5);
+        var proposed = propose(word, dictionary, {
+            threshhold: 0.5
+        });
         assert.strictEqual(proposed, null);
-        proposed = propose(word, dictionary, 0.2);
+        proposed = propose(word, dictionary, {
+            threshhold: 0.2
+        });
         assert.strictEqual(proposed, 'baabbbb');
     });
 });
