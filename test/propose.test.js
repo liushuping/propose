@@ -20,12 +20,21 @@ describe('#propose', function() {
         var dictionary = ['aaaaaaaa', 'baabbbb', 'ccccc'];
         var word = 'ab';
         var proposed = propose(word, dictionary, {
-            threshhold: 0.5
+            threshold: 0.5
         });
         assert.strictEqual(proposed, null);
         proposed = propose(word, dictionary, {
-            threshhold: 0.2
+            threshold: 0.2
         });
         assert.strictEqual(proposed, 'baabbbb');
+    });
+
+    it('should ignore case when the "ignoreCase" option is on', function() {
+        var dictionary = ['HELLO', 'hallo'];
+        var word = 'hello';
+        assert.strictEqual(propose(word, dictionary), 'hallo');
+        assert.strictEqual(propose(word, dictionary, {
+            ignoreCase: true
+        }), 'HELLO');
     });
 });

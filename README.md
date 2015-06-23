@@ -12,6 +12,25 @@ var word = 'hallo';
 propose(word, dictionary); //hello
 ```
 
+## Options
+`threshold` [0~1] specifies only the word with similarity equals to or higher than that value will be returned
+```javascript
+var dictionary = ['aaaaaaaa', 'baabbbb', 'ccccc'];
+var word = 'ab';
+propose(word, dictionary, {
+    threshold: 0.5
+}); // null as the most similar word does not meet the threshold value
+```
+
+`ignoreCase` [true, false] specifies whether ignore case when comparing two words
+```javascript
+var dictionary = ['HELLO', 'hallo'];
+var word = 'hello';
+propose(word, dictionary, {
+    ignoreCase: true
+}); //'HELLO'
+```
+
 ## Test
 Make sure `mocha` is installed globally
 ```
