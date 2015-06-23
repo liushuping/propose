@@ -7,6 +7,7 @@ This module can be used to propse the right command in the scenario when there i
 
 ## Example
 ```javascript
+var propose = require('propose');
 var dictionary = ['hello', 'world'];
 var word = 'hallo';
 propose(word, dictionary); //hello
@@ -15,6 +16,7 @@ propose(word, dictionary); //hello
 ## Options
 `threshold` [0~1] specifies only the word with similarity equals to or higher than that value will be returned
 ```javascript
+var propose = require('propose');
 var dictionary = ['aaaaaaaa', 'baabbbb', 'ccccc'];
 var word = 'ab';
 propose(word, dictionary, {
@@ -24,6 +26,7 @@ propose(word, dictionary, {
 
 `ignoreCase` [true, false] specifies whether ignore case when comparing two words
 ```javascript
+var propose = require('propose');
 var dictionary = ['HELLO', 'hallo'];
 var word = 'hello';
 propose(word, dictionary, {
