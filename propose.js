@@ -4,7 +4,7 @@ function propose() {
     var ratio;
     var distance;
     var proposed;
-    var max_ratio = 0; 
+    var max_ratio = 0;
     var word = arguments[0];
     var dictionary = arguments[1];
     var len = dictionary.length;
