@@ -24,6 +24,6 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "levenshtein-edit-distance": "^1.0.t0"
+    "levenshtein-edit-distance": "^1.0.0"
   }
 }
