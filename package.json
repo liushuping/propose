@@ -1,6 +1,6 @@
 {
   "name": "propose",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Propse a word when the input word is not in the dictionary",
   "main": "propose.js",
   "scripts": {
